@@ -1,0 +1,63 @@
+form#parseForm {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+form#parseForm > div {
+  display: flex;
+  flex-direction: column;
+}
+
+form#parseForm > div > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+form#parseForm > div > div > p,
+form#parseForm > div > div > label {
+  margin: 0.5em;
+}
+
+form#parseForm > div > button {
+  height: 2em;
+}
+
+.switch {
+  width: 40px;
+  height: 20px;
+  background-color: grey;
+  position: relative;
+}
+
+.switch > span {
+  height: 20px;
+  width: 20px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.switch > input:checked + span {
+  left: 100% !important;
+  transform: translateX(-100%);
+  background-color: dodgerblue !important;
+}
+
+.switch > input {
+  opacity: 0;
+}
+
+form#keyForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
