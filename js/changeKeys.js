@@ -8,15 +8,23 @@ export async function makeChangeKeysForm(data) {
   for (let i = 0; i < Object.keys(dataElement).length; i++) {
     if (!knownKeys.includes(Object.keys(dataElement)[i])) {
       knownKeys.push(Object.keys(dataElement)[i]);
-      let tablerow = document.createElement("tr");
+      const tablerow = document.createElement("tr");
       table.appendChild(tablerow);
 
-      let keyNowTd = document.createElement("td");
-      keyNowTd.textContent = Object.keys(dataElement)[i];
+      const keyNowTd = document.createElement("td");
+      const keyNowP = document.createElement("p");
+      keyNowP.textContent = Object.keys(dataElement)[i];
+      keyNowTd.appendChild(keyNowP);
       tablerow.appendChild(keyNowTd);
 
-      let keyChangeTd = document.createElement("td");
-      let keyChangeInput = document.createElement("input");
+      const moreInfo = document.createElement("td");
+      const moreInfoDiv = document.createElement("div");
+      moreInfoDiv.id = "moreInfo";
+      moreInfo.appendChild(moreInfoDiv);
+      tablerow.appendChild(moreInfo);
+
+      const keyChangeTd = document.createElement("td");
+      const keyChangeInput = document.createElement("input");
       keyChangeTd.appendChild(keyChangeInput);
       tablerow.appendChild(keyChangeTd);
     }
@@ -32,8 +40,8 @@ export async function changeKeys(data, event) {
           let dataIndex = Object.keys(dataElement)[i];
           dataElement[event.target[i].value] = dataElement[dataIndex];
           removeKeys.push(dataIndex);
-          if (event.target[i].parentElement.previousElementSibling.textContent === dataIndex) {
-            event.target[i].parentElement.previousElementSibling.textContent = event.target[i].value;
+          if (event.target[i].parentElement.previousElementSibling.previousElementSibling.children[0].textContent === dataIndex) {
+            event.target[i].parentElement.previousElementSibling.previousElementSibling.children[0].textContent = event.target[i].value;
           }
         }
       }

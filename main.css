@@ -49,10 +49,26 @@ form#parseForm > div > button {
 .switch > input {
   opacity: 0;
 }
+form#changeKeysForm > table {
+  border-collapse: collapse;
+}
 
-form#keyForm {
-  display: flex;
-  flex-direction: column;
+form#changeKeysForm > table tr {
+  border: 1px solid grey;
+}
+
+form#changeKeysForm > table > th {
+  text-align: left;
+}
+
+form#changeKeysForm > table td {
+  padding: 2px;
+  vertical-align: top;
+}
+
+form#changeKeysForm > table td > p {
+  margin: 0;
+  font-weight: 550;
 }
 
 .hidden {
@@ -60,4 +76,15 @@ form#keyForm {
   opacity: 0;
   height: 0;
   width: 0;
+}
+
+#moreInfo {
+  background-color: black;
+  height: 1em;
+  width: 1em;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+
+.active {
+  transform: rotate(180deg);
 }
