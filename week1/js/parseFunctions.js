@@ -1,21 +1,19 @@
 export async function upperCaseFunc(dataElement, dataIndex) {
+  // Kijkt of antwoord een string is
   if (typeof dataElement[dataIndex] === "string") {
-    dataElement[dataIndex] =
-      dataElement[dataIndex].charAt(0).toUpperCase() + dataElement[dataIndex].slice(1);
+    // Maakt van het antwoord de eerste karakater een hoofdletter
+    dataElement[dataIndex] = dataElement[dataIndex].charAt(0).toUpperCase() + dataElement[dataIndex].slice(1);
   }
 }
 
-const charCodeZero = "0".charCodeAt(0);
-const charCodeNine = "9".charCodeAt(0);
-
-function isDigit(s) {
-  return s.length == 1 && s.charCodeAt(0) >= charCodeZero && s.charCodeAt(0) <= charCodeNine;
-}
-
 export async function stringToDigitFunc(dataElement, dataIndex) {
+  // Kijkt of het antwoord een string is
   if (typeof dataElement[dataIndex] === "string") {
-    if (isDigit(dataElement[dataIndex].charAt(0))) {
-      if (!isDigit(dataElement[dataIndex].charAt(1))) {
+    // Kijkt of het eerste karakter een getal is
+    if (!isNaN(dataElement[dataIndex].charAt(0))) {
+      // Kijkt of het tweede karakter niet een getal is
+      if (isNaN(dataElement[dataIndex].charAt(1))) {
+        // Verandert de string naar alleen maar het eerste nummer
         dataElement[dataIndex] = parseInt(dataElement[dataIndex].charAt(0));
       }
     }
@@ -24,6 +22,7 @@ export async function stringToDigitFunc(dataElement, dataIndex) {
 
 export async function notAnswerdFunc(dataElement, dataIndex) {
   if (dataElement[dataIndex] === "") {
+    // Als het leeg is wordt er niet ingevuld van gemaakt
     dataElement[dataIndex] = "Niet ingevuld";
   }
 }
