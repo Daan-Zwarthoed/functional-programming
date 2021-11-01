@@ -12,16 +12,16 @@ const table = document.querySelector("table");
 
 let data;
 
+// Called alle cleanup functies na het checken of ze gebruikt moeten worden
 async function asyncParseFunctions(dataElement, dataIndex) {
   if (hoofdletters.checked) await upperCaseFunc(dataElement, dataIndex);
   if (getallenBegin.checked) await stringToDigitFunc(dataElement, dataIndex);
   if (nietIngevuld.checked) await notAnswerdFunc(dataElement, dataIndex);
 }
 
+// Loopt door elk antwoord en maakt ze schoon
 async function parseFunction() {
-  // looped door elk compleet formulier
   await data.forEach((dataElement) => {
-    // looped door elk key: antwoord pair
     for (let i = 0; i < Object.keys(dataElement).length; i++) {
       const dataIndex = Object.keys(dataElement)[i];
       asyncParseFunctions(dataElement, dataIndex);
@@ -31,35 +31,26 @@ async function parseFunction() {
 
 parseForm.addEventListener("submit", async function (event) {
   event.preventDefault();
-  // Maakt data object data uit dataIn textarea
-  data = JSON.parse(dataIn.value);
-  // Laat het changekeysform zien
-  makeChangeKeysForm(data);
-  // Schoont de data op
-  await parseFunction();
-  // Maakt dataOut textarea het opgeschoonde data object
-  dataOut.textContent = JSON.stringify(data);
+  data = JSON.parse(dataIn.value); // Maakt data object data uit de dataIn textarea
+  makeChangeKeysForm(data); // Laat het changekeysform zien
+  await parseFunction(); // Schoont de data op
+  dataOut.textContent = JSON.stringify(data); // Maakt dataOut textarea het opgeschoonde data object
 });
 
 changeKeysForm.addEventListener("submit", async function (event) {
   event.preventDefault();
-  // Verandert de keys voor elk antwoord
-  await changeKeys(data, event);
-  // Leegt de inputs
-  emptyInputs(event);
-  // Maakt dataOut textarea het data object met nieuwe keys
-  dataOut.textContent = JSON.stringify(data);
+  await changeKeys(data, event); // Verandert de keys voor elk antwoord
+  emptyInputs(event); // Leegt de inputs
+  dataOut.textContent = JSON.stringify(data); // Maakt dataOut textarea het data object met nieuwe keys
 });
 
+// Meer info eventlistener
 table.addEventListener("click", function (event) {
   if (event.target.id === "moreInfo") {
-    // Checkt of de info al wordt geshowed
     if (!event.target.classList.contains("active")) {
-      // Laat meer info zien
-      showMoreInfo(data, event);
+      showMoreInfo(data, event); // Laat meer info zien
     } else {
-      // Haalt meer info weg
-      hideMoreInfo(event);
+      hideMoreInfo(event); // Haalt meer info weg
     }
   }
 });
