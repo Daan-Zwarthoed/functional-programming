@@ -4,63 +4,33 @@
 
 ### Concept
 
-Het concept van week 1 is het maken van een Data opschoner. Ik heb hierbij gebruik gemaakt van een klein formulier waarbij je een textarea kan vullen met jouw data. Daarna kan je instellen welke opschoning je wel en niet wilt. Als je het formulier submit krijg je de opgeschonde data en een tabel waarbij je de keys kan veranderen van het formulier en/of de antwoorden zien met hoevaak ze zijn geantwoord. 
+My concept for week 1 is making a data cleaner. For this I made a small form in which you can put your data in a textarea and then enter which cleanings you do or don't want. When you submit the form you get the cleaned data and a table in which you can change the keys of all the questions. Also you can look at the answers and how many times they were answered.
 
 ### Installation
 
-clone the repository met 
-```
-git https://github.com/Daan-Zwarthoed/functional-programming.git
-```
-
-doe daarna om in de week 1 folder te komen
-
-```
-cd week1 
-```
-
-Ik gebruik five-server om een server te starten dus doe
-
-```
-npm install five-server
-```
-en dan 
-
-```
-five-server
-```
+1. Clone the repository with `git https://github.com/Daan-Zwarthoed/functional-programming.git`
+1. After that do `cd week1` to enter the right file
+1. Then run `npm install` to install the dependencies
+1. Then run `npm run start` to start a localhost
 
 ## Week 2
 
 ### Concept
 
+My concept for week 2 is the fetching of data from an API. I chose the Last.fm API. THat is a music API with information about the most famous artists and tracks in the world. I have collected the most famous artists and tracks voor a country of choice (Right now the Netherlands). And the most famous artists and tracks of the world.
+
 ### Installation
 
-
-clone the repository met 
-```
-git https://github.com/Daan-Zwarthoed/functional-programming.git
-```
-
-doe daarna om in de week 2 folder te komen
-
-```
-cd week2
-```
-
-Ik gebruik five-server om een server te starten dus doe
-
-```
-npm install five-server
-```
-en dan 
-
-```
-five-server
-```
+1. clone the repository met `git https://github.com/Daan-Zwarthoed/functional-programming.git`
+1. After that do `cd week2` to enter the right file
+1. Then run `npm install` to install the dependencies
+1. Then run `npm run start` to log the information to the console
 
 ## Algemeen
 
 ### Bronnen
+* For my documentation I took inspiration from [deannabosschert](https://github.com/deannabosschert/functional-programming)
+
 
 ### Liscense
+MIT liscense
