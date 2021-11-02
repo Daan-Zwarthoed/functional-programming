@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Daan-Zwarthoed/functional-programming/issues"
   },
-  "homepage": "https://github.com/Daan-Zwarthoed/functional-programming#readme"
+  "homepage": "https://github.com/Daan-Zwarthoed/functional-programming#readme",
+  "dependencies": {
+    "axios": "^0.24.0"
+  }
 }
