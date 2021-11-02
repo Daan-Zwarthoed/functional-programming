@@ -1,0 +1,19 @@
+{
+  "name": "week2",
+  "version": "1.0.0",
+  "description": "fetch music data from geo location and the world",
+  "main": "main.mjs",
+  "scripts": {
+    "start": "node main.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daan-Zwarthoed/functional-programming.git"
+  },
+  "author": "Daan Zwarthoed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Daan-Zwarthoed/functional-programming/issues"
+  },
+  "homepage": "https://github.com/Daan-Zwarthoed/functional-programming#readme"
+}
