@@ -1,12 +1,12 @@
 // Maakt de eerste karakter van elke string een hoofdletter
-export async function upperCaseFunc(dataElement, dataIndex) {
+export function upperCaseFunc(dataElement, dataIndex) {
   if (typeof dataElement[dataIndex] === "string") {
     dataElement[dataIndex] = dataElement[dataIndex].charAt(0).toUpperCase() + dataElement[dataIndex].slice(1); // Maakt van het antwoord de eerste karakater een hoofdletter
   }
 }
 
 // Als het eerste karakter een getal is en het tweede een letter dan wordt het antwoord omgezet naar alleen dat nummer
-export async function stringToDigitFunc(dataElement, dataIndex) {
+export function stringToDigitFunc(dataElement, dataIndex) {
   if (typeof dataElement[dataIndex] === "string") {
     if (!isNaN(dataElement[dataIndex].charAt(0))) {
       if (isNaN(dataElement[dataIndex].charAt(1))) {
@@ -17,7 +17,7 @@ export async function stringToDigitFunc(dataElement, dataIndex) {
 }
 
 // Als het antwoord leeg is wordt er niet ingevuld van gemaakt.
-export async function notAnswerdFunc(dataElement, dataIndex) {
+export function notAnswerdFunc(dataElement, dataIndex) {
   if (dataElement[dataIndex] === "") {
     dataElement[dataIndex] = "Niet ingevuld";
   }

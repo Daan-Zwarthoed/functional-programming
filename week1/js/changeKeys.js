@@ -1,6 +1,6 @@
 const table = document.querySelector("table");
 const changeKeysForm = document.getElementById("changeKeysForm");
-let knownKeys = [];
+const knownKeys = [];
 
 // Maakt per vraag/key een tablerow aan met daarin de vraag/key, een meer info knop en een input
 export async function makeChangeKeysForm(data) {
@@ -38,7 +38,7 @@ export async function makeChangeKeysForm(data) {
 
 // Voor elk ingevuld formulier worden de keys verandert
 export async function changeKeys(data, event) {
-  let removeKeys = [];
+  const removeKeys = [];
   await data.forEach((dataElement) => {
     for (let i = 0; i < Object.keys(dataElement).length; i++) {
       if (event.target[i]) {

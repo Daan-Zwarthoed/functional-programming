@@ -14,9 +14,9 @@ let data;
 
 // Called alle cleanup functies na het checken of ze gebruikt moeten worden
 async function asyncParseFunctions(dataElement, dataIndex) {
-  if (hoofdletters.checked) await upperCaseFunc(dataElement, dataIndex);
-  if (getallenBegin.checked) await stringToDigitFunc(dataElement, dataIndex);
-  if (nietIngevuld.checked) await notAnswerdFunc(dataElement, dataIndex);
+  if (hoofdletters.checked) upperCaseFunc(dataElement, dataIndex);
+  if (getallenBegin.checked) stringToDigitFunc(dataElement, dataIndex);
+  if (nietIngevuld.checked) notAnswerdFunc(dataElement, dataIndex);
 }
 
 // Loopt door elk antwoord en maakt ze schoon
@@ -39,8 +39,8 @@ parseForm.addEventListener("submit", async function (event) {
 
 changeKeysForm.addEventListener("submit", async function (event) {
   event.preventDefault();
-  await changeKeys(data, event); // Verandert de keys voor elk antwoord
   emptyInputs(event); // Leegt de inputs
+  await changeKeys(data, event); // Verandert de keys voor elk antwoord
   dataOut.textContent = JSON.stringify(data); // Maakt dataOut textarea het data object met nieuwe keys
 });
 
