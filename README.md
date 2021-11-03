@@ -4,6 +4,8 @@
 
 ### Concept
 
+![concept week 1](https://github.com/Daan-Zwarthoed/functional-programming/blob/main/images/week1-concept.jpg)
+
 My concept for week 1 is making a data cleaner. For this I made a small form in which you can put your data in a textarea and then enter which cleanings you do or don't want. When you submit the form you get the cleaned data and a table in which you can change the keys of all the questions. Also you can look at the answers and how many times they were answered.
 
 ### Installation
