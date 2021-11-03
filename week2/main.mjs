@@ -16,5 +16,8 @@ async function getStuff() {
     console.log("countryTrack:", popularTracks[0].name);
   });
 }
+var string = "test2";
+
+console.log(string === "test" ? "test1" : string);
 
 getStuff();

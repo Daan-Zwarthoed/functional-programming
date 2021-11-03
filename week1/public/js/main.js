@@ -13,7 +13,7 @@ const table = document.querySelector("table");
 let data;
 
 // Called alle cleanup functies na het checken of ze gebruikt moeten worden
-async function asyncParseFunctions(dataElement, dataIndex) {
+function asyncParseFunctions(dataElement, dataIndex) {
   if (hoofdletters.checked) upperCaseFunc(dataElement, dataIndex);
   if (getallenBegin.checked) stringToDigitFunc(dataElement, dataIndex);
   if (nietIngevuld.checked) notAnswerdFunc(dataElement, dataIndex);

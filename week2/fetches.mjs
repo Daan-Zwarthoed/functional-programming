@@ -3,7 +3,7 @@ import axios from "axios";
 // Fetched de populaire nummers van een land
 export function getPopularTracksCountry(country) {
   return axios
-    .request(`http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=${country}&limit=1000&api_key=424df88f98fb9a993131121f6457c381&format=json`)
+    .request(`http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=${country}&limit=50&api_key=424df88f98fb9a993131121f6457c381&format=json`)
     .then(function (response) {
       return response.data.tracks.track;
     })

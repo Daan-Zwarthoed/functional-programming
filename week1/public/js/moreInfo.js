@@ -1,5 +1,3 @@
-const table = document.querySelector("table");
-
 // De lijst met meer info wordt aangemaakt
 export async function showMoreInfo(data, event) {
   event.target.classList.add("active");
