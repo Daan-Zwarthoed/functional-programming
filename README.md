@@ -32,8 +32,8 @@ My concept for week 2 is the fetching of data from an API. I chose the Last.fm A
 
 ### Bronnen
 * For my documentation I took inspiration from [deannabosschert](https://github.com/deannabosschert/functional-programming)
+* * Stein Bergervoet for helping me with random code stuff
 * Teachers for keeping cool around my dumb ass questions
-* Stein Bergervoet for helping me with random code stuff
 
 
 ### Liscense
